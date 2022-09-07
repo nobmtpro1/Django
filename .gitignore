@@ -3,3 +3,4 @@ __pycache__/
 celerybeat-schedule
 docker-compose.yml
 /.docker
+/static/uploads/images/*
