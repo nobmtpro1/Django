@@ -5,7 +5,6 @@ from .Course import Course
 
 # Create your models here.
 
-
 class Session(models.Model):
     course_category = models.ForeignKey(CourseCategory, on_delete=models.RESTRICT)
     course = models.ForeignKey(Course, on_delete=models.RESTRICT)
@@ -14,3 +13,4 @@ class Session(models.Model):
     is_active = models.IntegerField(default=1)
     created_at = models.DateTimeField(null=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, auto_now=True)
+

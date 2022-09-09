@@ -6,11 +6,12 @@ from django.forms.models import model_to_dict
 from ...tasks import add
 
 from ...utilities.helpers import toJson
-from ...models import Ticket, Order, OrderDetail
+from ...models import Ticket, Order, OrderDetail, Course
 import json
 from marshmallow import Schema, fields, ValidationError, INCLUDE, validate
 from django.core import serializers
 import logging
+from django.forms import model_to_dict
 
 # validation
 class CartSchema(Schema):
@@ -47,10 +48,6 @@ class CartSchema(Schema):
             "invalid": "Email không hợp lệ",
         },
     )
-
-
-class MyException(Exception):
-    pass
 
 
 def index(request):
