@@ -2,11 +2,11 @@ from pprint import pprint
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
-from ...oauth2.facebook import facebookLoginUrl,facebookLoginCallback
+from src.services.oauth2.facebook import facebookLoginUrl,facebookLoginCallback
 
-from ...oauth2.google import googleLoginCallback, googleLoginUrl
+from src.services.oauth2.google import googleLoginCallback, googleLoginUrl
 
-from ...utilities.helpers import getFlashSession, setFlashSession
+from src.services.utilities.helpers import getFlashSession, setFlashSession
 from ...models import UserClient
 from marshmallow import Schema, fields, ValidationError, INCLUDE, validate
 import bcrypt

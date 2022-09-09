@@ -2,7 +2,7 @@
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from celery import shared_task
-from .utilities.helpers import randomString
+from src.services.utilities.helpers import randomString
 from .models import UserClient
 
 @shared_task

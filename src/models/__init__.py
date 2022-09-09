@@ -7,5 +7,3 @@ from .CourseCategory import CourseCategory
 from .Course import Course
 from .Session import Session
 from .CartItem import CartItem
-from .UserHasSession import UserHasSession
-from .UserHasCourse import UserHasCourse

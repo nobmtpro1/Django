@@ -2,7 +2,7 @@ from pprint import pprint
 from wsgiref.validate import validator
 from django.http import JsonResponse
 from django.shortcuts import render
-from ...utilities.uploadFile import uploadFile, validateFile
+from src.services.utilities.uploadFile import uploadFile, validateFile
 from ...models import Ticket
 from django.contrib.auth.models import User
 from django.db.models import Q

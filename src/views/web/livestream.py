@@ -2,7 +2,7 @@ from pprint import pprint
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
-from ...utilities.helpers import toJson
+from src.services.utilities.helpers import toJson
 from ...models import SoldTicket
 from django.template.defaultfilters import slugify
 import datetime

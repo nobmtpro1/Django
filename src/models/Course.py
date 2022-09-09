@@ -1,8 +1,10 @@
 from datetime import datetime
 from django.db import models
+
 from .CourseCategory import CourseCategory
 
 # Create your models here.
+
 
 class Course(models.Model):
     course_category = models.ForeignKey(CourseCategory, on_delete=models.RESTRICT)
@@ -11,5 +13,3 @@ class Course(models.Model):
     is_active = models.IntegerField(default=1)
     created_at = models.DateTimeField(null=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, auto_now=True)
-
-

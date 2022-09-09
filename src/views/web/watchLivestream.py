@@ -3,7 +3,7 @@ from pprint import pprint
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from ...utilities.helpers import toJson
+from src.services.utilities.helpers import toJson
 from ...models import SoldTicket, Ticket
 
 

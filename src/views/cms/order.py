@@ -4,7 +4,7 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
 from ...tasks import sendEmailOrderSuccess, printt
-from ...utilities.helpers import randomString, toJson
+from src.services.utilities.helpers import randomString, toJson
 from ...models import Order, SoldTicket
 from django.contrib.auth.decorators import permission_required
 from django.db import transaction

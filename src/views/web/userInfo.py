@@ -2,7 +2,7 @@ from pprint import pprint
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.db.models import Prefetch
-from ...utilities.helpers import toJson
+from src.services.utilities.helpers import toJson
 from ...models import UserClient, SoldTicket, Ticket
 
 
