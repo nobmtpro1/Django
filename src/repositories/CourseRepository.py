@@ -1,7 +1,7 @@
 from .BaseRepository import BaseRepository
 from src.models.Course import Course
 from ..models import CourseCategory, Course, Session, UserClient
-from .DynamicFieldsModelSerializer import DynamicFieldsModelSerializer
+from src.services.utilities.DynamicFieldsModelSerializer import DynamicFieldsModelSerializer
 
 
 class CourseCategorySerializer(DynamicFieldsModelSerializer):
@@ -32,7 +32,7 @@ class CourseSerializer(DynamicFieldsModelSerializer):
         fields = "__all__"
 
 
-class CourseRepository(BaseRepository):
+class Repository(BaseRepository):
     def __init__(self):
         self.model = Course
 

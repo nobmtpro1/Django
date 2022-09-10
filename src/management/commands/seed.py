@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 import importlib
 import glob, os
-
 os.chdir("./src/seeds")
 
 

@@ -3,7 +3,6 @@ from pprint import pprint
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.forms.models import model_to_dict
-from src.repositories.TicketRepository import TicketRepository
 from ...tasks import add
 from src.services.utilities.helpers import toJson
 from ...models import (
@@ -21,7 +20,7 @@ from django.core import serializers
 import logging
 from django.forms import model_to_dict
 from django.db.models import Prefetch
-from src.repositories.CourseRepository import CourseRepository
+from src.repositories.BaseRepository import repository
 
 # validation
 class CartSchema(Schema):
@@ -61,17 +60,8 @@ class CartSchema(Schema):
 
 
 def index(request):
-    # courseRepository = CourseRepository()
-    # coursesSerializer = courseRepository.getAllWithAllRelatedSerialize()
-    # return JsonResponse(coursesSerializer.data, safe=False)
-
-    # users = UserClient.objects.filter()
-    # pprint(users.first().has_sessions.all())
-    # usersSerializer = UserClientSerializer(users, many=True)
-    # return JsonResponse(usersSerializer.data, safe=False)
-
-    ticketRepository = TicketRepository()
-    tickets = ticketRepository.getAllOrderByIdDesc()
+    TicketRepository = repository("TicketRepository")
+    tickets = TicketRepository.getAllOrderByIdDesc()
     return render(
         request,
         "web/pages/home.html",

@@ -1,5 +1,5 @@
 from django.urls import path
-from ..views.web import home, livestream, auth, userInfo,watchLivestream
+from src.views.web import home, livestream, auth, userInfo,watchLivestream
 
 app_name = "web"
 urlpatterns = [

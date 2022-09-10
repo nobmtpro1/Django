@@ -1,3 +1,11 @@
+import importlib
+
+
+def repository(repo):
+    module = importlib.import_module("src.repositories." + repo)
+    return module.Repository()
+
+
 class BaseRepository:
     def __init__(self, model):
         self.model = model
